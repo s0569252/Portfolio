@@ -1,4 +1,4 @@
-# Imdi Melvana Mauladendra – Uni project
+# Imdi Melvana Mauladendra – Project
 
 Hi! I’m currently a Master's student in **Environmental Business Informatics** at HTW Berlin. I have a Bachelor's degree in **Business Informatics** and I’m passionate about using IT to solve business and environmental problems.
 
