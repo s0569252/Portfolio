@@ -1,54 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imdi Melvana | Portfolio</title>
+  <title>Imdi Melvana | Werkstudent gesucht</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">Imdi.</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <img src="images/foto.jpeg" alt="Imdi Photo" class="profile-img" />
-      <h2>Imdi Melvana Mauladendra</h2>
-      <p>M.Sc. Betriebliche Umweltinformatik | Werkstudent Data / Software / IT</p>
-      <a href="about.html" class="btn">View My Work</a>
+
+<header class="hero" id="home">
+  <nav class="navbar">
+    <h1 class="logo">Imdi_Portfolio</h1>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
-  </header>
 
-  <section class="projects">
-    <h2>Werkstudent Profile</h2>
-    <p class="werkstudent-text">Actively seeking a <strong>Werkstudent position</strong> in Data Analytics, Software Development, or IT-related roles. Available up to 20 hours/week during semester, based in Berlin.</p>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-    <h2>Selected Projects</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>Market Segmentation (Python)</h3>
-        <p>Comparison of scikit-learn vs TensorFlow using green coding principles.</p>
-      </div>
-      <div class="card">
-        <h3>Fridge Management App</h3>
-        <p>DevOps project using Ionic, React & Scrum methodology.</p>
-      </div>
-      <div class="card">
-        <h3>Logistics Data Analysis</h3>
-        <p>Python application & Power BI dashboards for logistics processes.</p>
-      </div>
+  <div class="hero-content">
+    <span class="subtitle">Werkstudent gesucht</span>
+    <h2>Imdi Melvana</h2>
+    <p>
+      Masterstudent der <strong>Betrieblichen Umweltinformatik</strong><br>
+      Data · Software · IT
+    </p>
+
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn">Kontakt aufnehmen</a>
+      <a href="Lebenslauf_Imdi.pdf" class="btn outline" download>CV herunterladen</a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <footer>
-    <p>© 2025 Imdi Melvana · Hosted on GitHub Pages</p>
-  </footer>
-  <script src="js/script.js"></script>
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <span class="subtitle">Über mich</span>
+      <h2>Motivierter Werkstudent</h2>
+      <p>
+        Ich bin Masterstudent der <strong>Betrieblichen Umweltinformatik</strong>
+        an der HTW Berlin mit Schwerpunkt auf Data Analytics,
+        Softwareentwicklung und nachhaltige IT-Lösungen.
+      </p>
+      <p>
+        Ich suche eine Werkstudentenstelle (bis zu 20 Std./Woche),
+        bei der ich meine technischen und analytischen Fähigkeiten
+        praxisnah einsetzen kann.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/foto.jpeg" alt="Imdi Melvana">
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <span class="subtitle">Projekte</span>
+  <h2>Aktuelle Projekte</h2>
+
+  <div class="project-grid">
+    <div class="card">
+      <h3>Market Segmentation</h3>
+      <p>
+        Clusteranalyse mit Python (scikit-learn & TensorFlow)
+        unter Berücksichtigung von Green-Coding-Prinzipien.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Kühlschrank Management App</h3>
+      <p>
+        Webanwendung mit React & Ionic, entwickelt im Scrum-Team
+        (DevOps-Projekt).
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Logistikdatenanalyse</h3>
+      <p>
+        Analyse von Inbound- und Outbound-Daten mit Python
+        sowie Visualisierung mit Power BI.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Imdi Melvana · Werkstudent Portfolio</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
