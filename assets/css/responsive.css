@@ -1,0 +1,117 @@
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding: 100px 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-grid {
+    gap: 20px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* NAVIGATION */
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* SECTION */
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  /* PROJECT CARD */
+
+  .project-card {
+    padding: 20px;
+  }
+
+  /* MODAL */
+
+  .modal-content {
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+}
