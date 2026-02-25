@@ -6,6 +6,7 @@
   --soft: #f6f5f4;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +25,6 @@ body {
 }
 
 /* NAVBAR */
-
 .navbar {
   position: fixed;
   width: 100%;
@@ -74,34 +74,36 @@ body {
 }
 
 /* HERO */
-
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*background: var(--soft);*/
   text-align: center;
   padding: 20px;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* FOTO BULAT DI HERO */
 .hero-avatar {
-  width: 140px;        /* ukuran foto */
+  width: 140px;
   height: 140px;
-  border-radius: 50%;  /* bikin bulat */
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 3px solid white; /* optional biar elegan */
+  border: 3px solid white;
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 600;
+  color: var(--soft);
+}
+
+.hero p {
+  color: var(--soft);
 }
 
 .btn {
@@ -112,14 +114,11 @@ body {
   color: white;
   border-radius: 30px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 25px;
-  flex-wrap: wrap;
+.btn:hover {
+  background: var(--accent1);
 }
 
 .btn.outline {
@@ -133,9 +132,7 @@ body {
   color: white;
 }
 
-
 /* SECTION */
-
 .section {
   max-width: 900px;
   margin: auto;
@@ -147,7 +144,77 @@ body {
   margin-bottom: 30px;
 }
 
+/* ABOUT */
+#about {
+  background-color: #F6F5F4;
+  padding: 120px 10%;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+/* EXPERIENCE / SKILLS */
+.experience h3 {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.skill-card h4 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
 /* PROJECTS */
+#projects {
+  background-color: #55795f;
+  padding: 100px 10%;
+  color: #2d3d32;
+}
+
+#projects h2 {
+  margin-bottom: 40px;
+}
 
 .project-grid {
   display: grid;
@@ -155,9 +222,11 @@ body {
 }
 
 .project-card {
+  background-color: #f6f5f4;
+  color: #2d3d32;
   padding: 30px;
-  border: 1px solid #eee;
   border-radius: 12px;
+  border: 1px solid #eee;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -168,7 +237,6 @@ body {
 }
 
 /* MODAL */
-
 .modal {
   display: none;
   position: fixed;
@@ -195,7 +263,6 @@ body {
 }
 
 /* FADE IN */
-
 .fade {
   opacity: 0;
   transform: translateY(40px);
@@ -207,29 +274,26 @@ body {
   transform: translateY(0);
 }
 
-/* Full-width footer */
+/* FOOTER */
 footer {
   width: 100%;
-  background-color: var(--accent1); /* hijau tua */
+  background-color: var(--accent1);
   color: white;
-  padding: 50px 0; /* jarak atas-bawah */
+  padding: 50px 0;
   text-align: center;
 }
 
-/* Container supaya konten tetap max lebar */
 footer .footer-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px; /* jarak kiri-kanan di mobile */
+  padding: 0 20px;
 }
 
-/* Email */
 footer p {
   margin: 10px 0;
   font-size: 1rem;
 }
 
-/* Social icons */
 footer .footer-social {
   display: flex;
   justify-content: center;
@@ -244,145 +308,18 @@ footer .footer-social a {
 }
 
 footer .footer-social a:hover {
-  color: var(--accent); /* hijau saat hover */
+  color: var(--accent);
   transform: translateY(-3px);
 }
 
-/* Copyright */
 footer .footer-copyright {
   font-size: 0.9rem;
   color: #ddd;
   margin-top: 10px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  footer .footer-social {
-    gap: 15px;
-  }
-}
-
-
-
-/* MOBILE */
-
-@media(max-width: 768px){
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 12px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
+/* ANIMATION KEYFRAMES */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(20px); }
   to { opacity:1; transform:translateY(0); }
-}
-
-/* ABOUT SECTION MODERN */
-
-#about {
-  background-color: #F6F5F4;
-  padding: 120px 10%;
-}
-
-.about-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 80px;
-  flex-wrap: wrap;
-}
-
-/* FOTO BULAT */
-.about-image img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-/* TEXT */
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.about-text h2 {
-  margin-bottom: 20px;
-}
-
-/* EXPERIENCE */
-
-.experience h3 {
-  margin-bottom: 40px;
-  font-size: 1.5rem;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-/* CARD STYLE */
-.skill-card {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.skill-card h4 {
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image {
-    margin-bottom: 20px;
-  }
-}
-
-/* PROJECTS SECTION BACKGROUND */
-#projects {
-  background-color: #55795f; /* Warna hijau tua sesuai tema */
-  padding: 100px 10%;
-  color: #2d3d32;
-}
-
-#projects h2 {
-  margin-bottom: 40px; /* jarak setelah judul */
-}
-
-#projects .project-card {
-  background-color: #f6f5f4; /* card tetap terang agar kontras */
-  color: #2d3d32;
 }

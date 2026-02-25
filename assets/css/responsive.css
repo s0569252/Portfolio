@@ -1,7 +1,6 @@
 /* ============================= */
 /* TABLET */
 /* ============================= */
-
 @media (max-width: 1024px) {
 
   .section {
@@ -22,11 +21,9 @@
 /* ============================= */
 /* MOBILE */
 /* ============================= */
-
 @media (max-width: 768px) {
 
   /* NAVIGATION */
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -60,9 +57,10 @@
   }
 
   /* HERO */
-
   .hero {
     padding: 0 20px;
+    height: auto;
+    min-height: 100vh;
   }
 
   .hero h1 {
@@ -73,8 +71,12 @@
     font-size: 1rem;
   }
 
-  /* SECTION */
+  .hero-avatar {
+    width: 110px;
+    height: 110px;
+  }
 
+  /* SECTION */
   .section {
     padding: 80px 20px;
   }
@@ -83,26 +85,48 @@
     font-size: 1.6rem;
   }
 
-  /* PROJECT CARD */
+  /* ABOUT */
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
 
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* EXPERIENCE GRID */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECT CARD */
   .project-card {
     padding: 20px;
   }
 
   /* MODAL */
-
   .modal-content {
     padding: 25px;
     border-radius: 12px;
   }
 
-}
+  /* FOOTER */
+  footer .footer-social {
+    gap: 15px;
+  }
 
+}
 
 /* ============================= */
 /* SMALL MOBILE */
 /* ============================= */
-
 @media (max-width: 480px) {
 
   .hero h1 {
