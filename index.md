@@ -5,17 +5,54 @@ title: Home
 
 <!-- ABOUT -->
 <section id="about" class="fade">
-  <div class="about-container" style="display:flex; flex-wrap:wrap; align-items:center; gap:40px;">
-    <div class="about-text" style="flex:1; min-width:280px;">
-      <h2>Über mich</h2>
-      <p>Masterstudent der Betrieblichen Umweltinformatik an der HTW Berlin. Fokus auf Data Analytics, nachhaltige IT und Softwareentwicklung.</p>
+
+  <div class="about-wrapper">
+
+    <!-- FOTO -->
+    <div class="about-image">
+      <img src="{{ '/images/foto.jpeg' | relative_url }}" alt="Imdi Melvana">
     </div>
 
-    <div class="about-image" style="flex:1; text-align:right; min-width:280px;">
-      <img src="{{ '/images/foto.jpeg' | relative_url }}" alt="Imdi Melvana" style="max-width:100%; border-radius:6px;">
+    <!-- TEXT -->
+    <div class="about-text">
+      <h2>Über mich</h2>
+      <p>
+        Masterstudent der Betrieblichen Umweltinformatik an der HTW Berlin.
+        Fokus auf Data Analytics, nachhaltige IT und Softwareentwicklung.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="experience">
+    <h3>Experience & Skills</h3>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Programming</h4>
+        <p>Python · Java · JavaScript · SQL</p>
+      </div>
+
+      <div class="skill-card">
+        <h4>Data & Analytics</h4>
+        <p>Pandas · Power BI · Machine Learning · Data Visualization</p>
+      </div>
+
+      <div class="skill-card">
+        <h4>Tools</h4>
+        <p>Git · Docker · VS Code · Jupyter · Linux</p>
+      </div>
+
+      <div class="skill-card">
+        <h4>Web</h4>
+        <p>HTML · CSS · React · Ionic</p>
+      </div>
     </div>
   </div>
+
 </section>
+
 
 
 <section id="projects" class="fade">
@@ -41,11 +78,6 @@ title: Home
   </div>
 </section>
 
-<section id="contact" class="section fade">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:imdimelvana@gmail.com">imdimelvana@gmail.com</a></p>
-  <p>Berlin, Deutschland</p>
-</section>
 
 <!-- Modal -->
 <div id="projectModal" class="modal">

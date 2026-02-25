@@ -1,4 +1,6 @@
-// Hamburger
+// ===============================
+// HAMBURGER MENU
+// ===============================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
@@ -6,7 +8,9 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Fade In Animation
+// ===============================
+// FADE-IN ANIMATION
+// ===============================
 const fades = document.querySelectorAll(".fade");
 
 const observer = new IntersectionObserver(entries => {
@@ -19,7 +23,9 @@ const observer = new IntersectionObserver(entries => {
 
 fades.forEach(f => observer.observe(f));
 
-// Modal
+// ===============================
+// MODAL PROJECT
+// ===============================
 function openModal(num){
   const modal = document.getElementById("projectModal");
   const body = document.getElementById("modal-body");
@@ -44,3 +50,21 @@ window.onclick = function(e){
     modal.style.display = "none";
   }
 }
+
+// ===============================
+// SMOOTH SCROLL UNTUK SEMUA .BTN DENGAN ANCHOR
+// ===============================
+document.querySelectorAll('.btn[href^="#"]').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    const targetId = this.getAttribute('href').replace('#','');
+    const targetEl = document.getElementById(targetId);
+    if(targetEl){
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Tutup menu hamburger otomatis jika aktif
+    if(navLinks && navLinks.classList.contains("active")){
+      navLinks.classList.remove("active");
+    }
+  });
+});

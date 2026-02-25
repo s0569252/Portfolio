@@ -89,6 +89,16 @@ body {
   background-repeat: no-repeat;
 }
 
+/* FOTO BULAT DI HERO */
+.hero-avatar {
+  width: 140px;        /* ukuran foto */
+  height: 140px;
+  border-radius: 50%;  /* bikin bulat */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid white; /* optional biar elegan */
+}
+
 .hero h1 {
   font-size: 3rem;
   font-weight: 600;
@@ -197,16 +207,62 @@ body {
   transform: translateY(0);
 }
 
-/* FOOTER */
-
+/* Full-width footer */
 footer {
+  width: 100%;
+  background-color: var(--accent1); /* hijau tua */
+  color: white;
+  padding: 50px 0; /* jarak atas-bawah */
   text-align: center;
-  padding: 40px;
-  background: var(--accent1);
-  color: #55795f;
-  border-top: 1px solid #eee;
-  margin-top: 60px;
 }
+
+/* Container supaya konten tetap max lebar */
+footer .footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px; /* jarak kiri-kanan di mobile */
+}
+
+/* Email */
+footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Social icons */
+footer .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+footer .footer-social a {
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+footer .footer-social a:hover {
+  color: var(--accent); /* hijau saat hover */
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .footer-copyright {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer .footer-social {
+    gap: 15px;
+  }
+}
+
+
 
 /* MOBILE */
 
@@ -236,46 +292,82 @@ footer {
   to { opacity:1; transform:translateY(0); }
 }
 
-/* ABOUT SECTION BACKGROUND */
+/* ABOUT SECTION MODERN */
+
 #about {
-  background-color: #F6F5F4; /* Warna full About */
+  background-color: #F6F5F4;
+  padding: 120px 10%;
+}
+
+.about-wrapper {
   display: flex;
-  gap: 40px;
   align-items: center;
-  justify-content: space-between;
-  padding: 120px 10%; /* full-width padding */
-  flex-wrap: wrap; /* responsif */
+  gap: 60px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
-#about .about-text {
-  flex: 1 1 300px; /* minimal width 300px untuk responsif */
-}
-
-#about .about-image {
-  flex: 0 0 auto; /* jangan stretch */
-  text-align: right;
-  margin-top: 20px; /* untuk spacing di mobile */
-}
-
-#about .about-image img {
-  max-width: 150px;  /* ukuran kecil */
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+/* FOTO BULAT */
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* RESPONSIVE ABOUT */
+/* TEXT */
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+/* EXPERIENCE */
+
+.experience h3 {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* CARD STYLE */
+.skill-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.skill-card h4 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
-  #about {
+  .about-wrapper {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  #about .about-image {
-    text-align: center;
-    margin-top: 20px;
+  .about-image {
+    margin-bottom: 20px;
   }
 }
 
