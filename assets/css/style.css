@@ -124,12 +124,31 @@ body {
 .btn.outline {
   background: transparent;
   border: 1.5px solid var(--accent);
-  color: var(--accent);
+  color: var(--soft);
 }
 
 .btn.outline:hover {
   background: var(--accent);
   color: white;
+}
+
+/* Hero social icons */
+.hero-social {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-social a {
+  color: white;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+.hero-social a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
 }
 
 /* SECTION */
@@ -158,18 +177,18 @@ body {
   margin-bottom: 80px;
 }
 
-.about-image img {
+/* .about-image img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
+} */
 
 .about-text {
   flex: 1;
   min-width: 280px;
-}
+} 
 
 .about-text h2 {
   margin-bottom: 20px;
@@ -208,8 +227,27 @@ body {
 /* PROJECTS */
 #projects {
   background-color: #55795f;
-  padding: 100px 10%;
-  color: #2d3d32;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 100px 0;
+  color: var(--bg);
+}
+
+/* FULL WIDTH BOX */
+.projects-box {
+  background-color: var(--accent1);
+  border-radius: 25px;
+  padding: 70px 60px;
+  width: 95%;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* HOVER EFFECT KUAT SEPERTI FOOTER */
+.projects-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
 }
 
 #projects h2 {
@@ -275,47 +313,50 @@ body {
 }
 
 /* FOOTER */
+/* Footer background full-width */
+/* Footer full-width */
 footer {
   width: 100%;
+  background-color: var(--accent);
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Bingkai horizontal footer */
+.footer-box {
   background-color: var(--accent1);
-  color: white;
-  padding: 50px 0;
-  text-align: center;
-}
-
-footer .footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-footer p {
-  margin: 10px 0;
-  font-size: 1rem;
-}
-
-footer .footer-social {
+  border-radius: 16px;
+  padding: 15px 40px;
+  width: calc(100% - 40px); /* hampir full width dengan margin kiri-kanan */
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontal */
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
+  align-items: center;
+  position: relative; /* untuk posisi absolut anak */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-footer .footer-social a {
-  color: white;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-
-footer .footer-social a:hover {
-  color: var(--accent);
+/* Hover efek */
+.footer-box:hover {
   transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-footer .footer-copyright {
-  font-size: 0.9rem;
+/* Teks kiri */
+.footer-left {
   color: #ddd;
-  margin-top: 10px;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+}
+
+/* Teks kanan: posisi di pojok kanan viewport */
+.footer-right {
+  color: #ddd;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+  position: absolute;
+  right: 20px; /* pojok kanan dalam bingkai */
 }
 
 /* ANIMATION KEYFRAMES */

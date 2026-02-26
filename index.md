@@ -8,10 +8,10 @@ title: Home
 
   <div class="about-wrapper">
 
-    <!-- FOTO -->
+    <!-- FOTO 
     <div class="about-image">
       <img src="{{ '/images/foto.jpeg' | relative_url }}" alt="Imdi Melvana">
-    </div>
+    </div> -->
 
     <!-- TEXT -->
     <div class="about-text">
@@ -56,25 +56,26 @@ title: Home
 
 
 <section id="projects" class="fade">
-  <h2>Projects</h2>
+  <div class="projects-box fade">
+    <h2>Projects</h2>
 
-  <div class="project-grid">
+    <div class="project-grid">
 
-    <div class="project-card" onclick="openModal(1)">
-      <h3>Market Segmentation</h3>
-      <p>Machine Learning & Green Coding</p>
+      <div class="project-card" onclick="openModal(1)">
+        <h3>Market Segmentation</h3>
+        <p>Machine Learning & Green Coding</p>
+      </div>
+
+      <div class="project-card" onclick="openModal(2)">
+        <h3>Kühlschrank App</h3>
+        <p>React & Ionic</p>
+      </div>
+
+      <div class="project-card" onclick="openModal(3)">
+        <h3>Logistik Analyse</h3>
+        <p>Python & Power BI</p>
+      </div>
     </div>
-
-    <div class="project-card" onclick="openModal(2)">
-      <h3>Kühlschrank App</h3>
-      <p>React & Ionic</p>
-    </div>
-
-    <div class="project-card" onclick="openModal(3)">
-      <h3>Logistik Analyse</h3>
-      <p>Python & Power BI</p>
-    </div>
-
   </div>
 </section>
 
